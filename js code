@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script>
+            var alarmTimeout;
+
+            function updateClock() {
+                var now = new Date();
+                var hours = now.getHours().toString().padStart(2, '0');
+                var minutes = now.getMinutes().toString().padStart(2, '0');
+                var seconds = now.getSeconds().toString().padStart(2, '0');
+                document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+            }
+
+            function setAlarm() {
+                var alarmTime = document.getElementById('alarm').value;
+                if (alarmTime !== '') {
+                    var current = new Date();
+                    var alarm = new Date(current.toDateString() + ' ' + alarmTime);
+                    var timeToAlarm = alarm - current;
+                    if (timeToAlarm > 0) {
+                        alarmTimeout = setTimeout(function() {
+                            document.getElementById('alarmSound').play();
+                            alert('Alarm!');
+                        }, timeToAlarm);
+                        document.getElementById('setAlarmButton').style.display = 'none';
+                        document.getElementById('deleteAlarmButton').style.display = 'inline';
+                    } else {
+                        alert('Please set a future time for the alarm.');
+                    }
+                } else {
+                    alert('Please set a time for the alarm.');
+                }
+            }
+
+            function deleteAlarm() {
+                clearTimeout(alarmTimeout);
+                document.getElementById('setAlarmButton').style.display = 'inline';
+                document.getElementById('deleteAlarmButton').style.display = 'none';
+                document.getElementById('alarm').value = '';
+            }
+
+            updateClock();
+            setInterval(updateClock, 1000);
+
+            document.getElementById('setAlarmButton').addEventListener('click', setAlarm);
+            document.getElementById('deleteAlarmButton').addEventListener('click', deleteAlarm);
+        </script>
