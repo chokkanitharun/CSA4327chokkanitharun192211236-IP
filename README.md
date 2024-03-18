@@ -15,8 +15,7 @@ Easy to use interface.
 To run this application, simply download or clone the repository to your local machine and open the index.html file in a web browser.
 
 bash
-Copy code
-git clone https://github.com/yourusername/alarm-clock-app.git
+Copy code to git clone
 cd alarm-clock-app
 **Usage**
 Open the index.html file in your preferred web browser.
