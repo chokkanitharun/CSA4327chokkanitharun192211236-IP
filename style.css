@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* IMPORTANT */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #023047;
+    color: #343541;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+.content-wrapper {
+    width: 50em;
+    margin: 40px auto 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.466);
+}
+
+/* THE HEADER */
+.image {
+    background-image: url('https://images.shiksha.com/mediadata/images/1574155849phpRVIBqD.jpeg');
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+h1, h2 {
+    text-align: center;
+    padding: 5px;
+}
+h1 {
+    font-weight: 900;
+    padding-top: 10px;
+}
+.info {
+    padding: 15px 25px;
+    text-align: justify;
+}
+#completionDate {
+    padding-top: 10px;
+}
+.deadline {
+    font-family: monospace;
+    font-size: 1.15em;
+    color: #d1180a;
+}
+
+/* The form */
+form {
+    padding: 20px 25px;
+}
+section {
+    margin-bottom: 45px;
+}
+
+/* STUDENT DETAILS SECTION */
+h3 {
+    border-bottom: 3px solid #ffb703;
+    padding-bottom: 3px;
+    margin-bottom: 18px;
+}
+td.inputs {
+    padding: 0 20px;
+}
+td.inputs > input {
+    width: 200px;
+    height: 20px;
+}
+td {
+    padding: 10px 0;
+}
+.inputs > select {
+    height: 22px;
+}
+
+/* TEACHER REVIEW SECTION */
+.trQuestion {
+    margin-bottom: 20px;
+}
+.trQuestion > label, .struggleConatiner > label, .endPart > label {
+    padding-left: 10px;
+}
+
+/* SUBJECT REVIEW SECTION */
+.struggleConatiner textarea, .accessibleQ > textarea {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    padding: 3px 5px;
+    font-size: 15px;
+}
+
+
+/* Accessibility and Comfortability */
+.accessibleQ > select, .accessibleQ > textarea {
+    margin: 20px 0;
+}
+.explainQuestion {
+    margin-top: 10px;
+}
+#comfExplain {
+    margin-bottom: 0;
+}
+.accessibleQ > select {
+    height: 20px; 
+}
+
+/* END OF FORM  */
+.endPart {
+    border-top: 3px solid #ffb703;
+    padding-top: 30px;
+}
+#dateLbl {
+    padding: 0;
+}
+#dateComp {
+    height: 20px; 
+    margin-left: 10px;
+}
+.endPart button {
+    padding: 10px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    border-radius: 7.5px;
+    border: none;
+    font-size: large;
+    background-color: #ffb703;
+    color: #023047;
+    transition: 300ms;
+    font-weight: 600;
+}
+.endPart button:hover {
+    background-color: #dea003;
+    cursor: pointer;
+}
+.requiredTick {
+    color: #d1180a;
+    font-weight: 600;
+}
+#end {
+    margin-bottom: 30px;
+}
+#linkButton {
+    text-decoration: none;
+}
+
+/* FOOTER SECTION */
+footer {
+    display: flex;
+    justify-content:center ;
+    width: 100%;
+    color: #c4d2de;
+    margin-bottom: 40px;
+}
