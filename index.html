@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Survey Form</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="image"></div>
+            <h1>SAVEETHA SCHOOL OF ENGINEERING</h1>
+            <h2>Student Survey</h2>
+            <div class="info">
+                <p>Welcome students, this survey is for you to fill out so we have an idea on how the university is performing from the older students' point of view.</p>
+                <p id="completionDate">This is to be completed by: <span class="deadline">thursday 28th march 2024</span></p>
+            </div>
+        </header>
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+            <!-- To-do list: All the questions. Text boxes, check boxes, radio buttons, text areas, submit button -->
+
+            <section class="studentContainer">
+                <h3>Student Details</h3>
+                <table>
+                    <tr>
+                        <td><label for="fname"><span class="requiredTick">* </span>First name:</label></td>
+                        <td class="inputs"><input type="text" name="fname" id="fname" required placeholder="e.g. John"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname"><span class="requiredTick">* </span>Last name:</label></td>
+                        <td class="inputs"><input type="text" name="lname" id="lname" required placeholder="e.g. Doe"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="stuEmail"><span class="requiredTick">* </span>college email:</label></td>
+                        <td class="inputs"><input type="email" name="stuEmail" id="stuEmail" required placeholder="e.g. johndoe.sse@saveetha.net"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mentor"><span class="requiredTick">* </span>Form mentor:</label></td>
+                        <td class="inputs"><input type="text" name="mentor" id="mentor" required placeholder="e.g. Mr.Gnanasambandan"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="YearGroup"><span class="requiredTick">* </span>Year group:</label></td>
+                        <td class="inputs">
+                            <select title="Please select your year group" name="YearGroup" id="YearGroup" required>
+                                <option value="2" selected>Year 2</option>
+                                <option value="3">Year 3</option>
+                                <option value="4">Year 4</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="teachersContainer">
+                <h3>faculties Review</h3>
+                
+                <article class="trQuestion">
+                    <p>Please select the faculty who you enjoy their classes the <strong>most</strong> in computer science engineering</p><br>
+                    <input type="radio" id="mrAW" name="EngLangLit"><label for="mrAW">Mr. Averie Walker</label>
+                    <br><br>
+                    <input type="radio" id="mrMP" name="EngLangLit"><label for="mrMP">Mr. Meadow Preston</label>
+                    <br><br>
+                    <input type="radio" id="missSF" name="EngLangLit"><label for="missSF">Miss. Selina Foster</label>
+                    <br><br>
+                    <input type="radio" id="missKN" name="EngLangLit"><label for="missKN">Ms. Keyla Nunez</label>
+                    <br><br>
+                </article>
+
+                <article class="trQuestion">
+                    <p>Please select the teacher who you enjoy their classes the <strong>most</strong> in Information Technology</p><br>
+                    <input type="radio" id="mrEC" name="IT"><label for="mrEC">Mr. Elliott Craig</label>
+                    <br><br>
+                    <input type="radio" id="msDD" name="IT"><label for="msDD">Ms. Dashawn Dillon</label>
+                    <br><br>
+                    <input type="radio" id="mrNW" name="IT"><label for="mrNW">Mr. Nathan Walter</label>
+                    <br><br>
+                    <input type="radio" id="missBD" name="IT"><label for="missBD">Miss. Brittany Downs</label>
+                </article>
+
+            </section>
+
+            <section class="accessibleQ">
+                <h3>Accessibility and Comfortability</h3>
+
+                <p>How accessible is your faculty for questions and assistance?</p>
+                <select title="Accessibility selection" name="accessGroup" id="accessGroup" required>
+                    <option value="very">Very</option>
+                    <option value="somewhatAccess">Somewhat accessible</option>
+                    <option value="notAccess">Not accessible</option>
+                </select>
+</section>
+<a href="submitted.html" target="_blank" rel="noopener noreferrer" id="linkButton">
+                    <button type="submit">Submit Survey</button>
+                </a>
+        </form>
